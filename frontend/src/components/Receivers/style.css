@@ -1,0 +1,12 @@
+button.list:hover {
+    color: crimson;
+}
+
+button.list {
+    margin: 20px 0 0 20px;
+    padding: 20px 40px;
+    font-family: monospace, "Courier New";
+    border: none;
+    background-color: white;
+    color: darkblue;
+}

@@ -1,0 +1,42 @@
+div.text-center {
+    width: 70%;
+    background-color: rgba(230, 242, 252, 1);
+    margin: auto;
+    border-radius: 20px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+form {
+    max-width: 80%;
+    margin: auto;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+input.subject {
+    height: 20px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 500px;
+    border: 4px inset;
+    /*background-color: rgba(218, 228, 245, 0.8);*/
+}
+
+label.form {
+    text-align: center;
+    display: block;
+    font-family: "Courier New", monospace;
+}
+
+button {
+    margin: auto;
+    width: 200px;
+    height: 50%;
+}

@@ -1,0 +1,29 @@
+div.listform, table {
+    width: 80%;
+    margin: auto;
+    /*margin: 15px 75px;*/
+    /*max-height: 80% !important;*/
+}
+
+div.addreceiver button {
+    margin: 20px 0 20px 60px;
+    padding: 20px 40px;
+    font-family: monospace, "Courier New";
+    background-color: white;
+    color: darkblue;
+    border-color: darkblue;;
+}
+
+div.addreceiver button:active {
+    background-color: white;
+}
+
+div.addreceiver button:hover {
+    color: crimson;
+    background-color: white;
+    border-color: crimson;
+}
+
+table {
+    max-height: 10% !important;
+}

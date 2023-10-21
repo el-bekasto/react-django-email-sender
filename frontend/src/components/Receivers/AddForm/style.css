@@ -1,0 +1,13 @@
+div.addform {
+    margin: 25px 50px;
+    background-color: rgba(230, 242, 252, 1);
+}
+
+div.inputs, button.add {
+    display: inline-block;
+    margin: 25px 30px;
+}
+
+button.add {
+    padding: 10px 40px;
+}
