@@ -5,20 +5,16 @@ div.listform, table {
     /*max-height: 80% !important;*/
 }
 
-div.addreceiver button {
+div.addreceiver button, div.addformbutton button {
     margin: 20px 0 20px 60px;
-    padding: 20px 40px;
+    padding: 20px 20px;
     font-family: monospace, "Courier New";
     background-color: white;
     color: darkblue;
     border-color: darkblue;;
 }
 
-div.addreceiver button:active {
-    background-color: white;
-}
-
-div.addreceiver button:hover {
+div.addreceiver button:hover, div.addformblock button:hover {
     color: crimson;
     background-color: white;
     border-color: crimson;

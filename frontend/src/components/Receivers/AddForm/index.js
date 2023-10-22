@@ -1,5 +1,7 @@
 import './style.css'
 import {useState} from "react";
+import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
 
 export default function AddForm ({parent}) {
     const [name, setName] = useState('')
@@ -12,21 +14,23 @@ export default function AddForm ({parent}) {
 
     return (
         <div className={"addformblock"}>
-            <button onClick={() => parent.changePage('list')} className={"list"}>{'<'} Back to list</button>
-            <div className={"addform"}>
-                <div className={"inputs"}>
-                    <div className={"name"}>
-                        <div>Name:</div>
-                        <input className={'addform'} name={"nameinput"} value={name} onChange={(event) => setName(event.target.value)}/>
-                    </div>
-                    <br></br>
-                    <div className={"address"}>
-                        <div>Address:</div>
-                        <input name={"addressinput"} value={address} onChange={(event) => setAddress(event.target.value)}/>
-                    </div>
+            <div className={'addformbutton'}>
+                <Button onClick={() => parent.changePage('list')} size={'sm'}>{'<'} Back to list</Button>
+            </div>
+            <div className={"text-center"}>
+                <Form>
+                    <Form.Group>
+                        <Form.Label>Name:</Form.Label>
+                        <Form.Control value={name} onChange={(event) => setName(event.target.value)} placeholder={'John Doe'}/>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Email address:</Form.Label>
+                        <Form.Control value={address} onChange={(event) => setAddress(event.target.value)} placeholder={'user@mail.com'}/>
+                    </Form.Group>
+                </Form>
+                <div className={'addformconfirm'}>
+                    <Button onClick={addReceiver}>Add</Button>
                 </div>
-                <br></br>
-                <button onClick={addReceiver} className={"add"}>Add</button>
             </div>
         </div>
     )

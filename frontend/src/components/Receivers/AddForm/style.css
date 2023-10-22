@@ -1,13 +1,14 @@
-div.addform {
-    margin: 25px 50px;
+div.text-center {
+    /*margin: 25px 50px;*/
+    padding-bottom: 4%;
+    padding-top: 4%;
     background-color: rgba(230, 242, 252, 1);
 }
 
-div.inputs, button.add {
-    display: inline-block;
-    margin: 25px 30px;
+label {
+    text-align: left !important;
 }
 
-button.add {
-    padding: 10px 40px;
+div.addformconfirm button {
+    margin: auto !important;
 }

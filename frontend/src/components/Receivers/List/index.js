@@ -31,7 +31,7 @@ export default class List extends Component {
         return (
             <div className={"list"}>
                 <div className={'addreceiver'}>
-                    <Button onClick={this.addClick} size={'sm'}>Add receiver</Button>
+                    <Button onClick={this.addClick} size={'sm'}>+ Add receiver</Button>
                 </div>
                 <div className={'listform'}>
                     <Form.Group>
