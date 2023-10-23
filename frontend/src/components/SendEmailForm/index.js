@@ -32,19 +32,20 @@ export default function SendEmailForm () {
     }
 
     return (
-        <div className={"text-center"}>
-            <Form>
-                <Form.Group className={"mb-3"}>
-                    <Form.Label>Subject</Form.Label>
-                    <Form.Control placeholder={"About last weekend..."}/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control as={'textarea'} rows={7} placeholder={'Dear John Doe...'}/>
-                </Form.Group>
-            </Form>
-            <Button variant={"primary"}>Send</Button>
-            {/*<button type={'submit'} className={"submit"} onClick={sendButton}>Send</button>*/}
+        <div className={'send-form'}>
+            <div className={"text-center"}>
+                <Form>
+                    <Form.Group className={"mb-3"}>
+                        <Form.Label>Subject</Form.Label>
+                        <Form.Control placeholder={"About last weekend..."}/>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control as={'textarea'} rows={7} placeholder={'Dear John Doe...'}/>
+                    </Form.Group>
+                </Form>
+                <Button variant={"primary"}>Send</Button>
+            </div>
         </div>
     )
 }

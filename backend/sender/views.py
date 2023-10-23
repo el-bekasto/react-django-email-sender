@@ -26,13 +26,7 @@ class SendMailAPIView(APIView):
             ).send()
         return Response(
             data={'response': 'success'}
-            # headers={
-            #     'Access-Control-Allow-Origin': request.headers['origin']
-            # }
         )
-
-    # queryset = Receiver.objects.all()
-    # serializer_class = SendMailSerializer
 
 
 class GetReceiversAPIView(ListAPIView):

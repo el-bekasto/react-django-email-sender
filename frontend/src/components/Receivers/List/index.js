@@ -34,19 +34,25 @@ export default class List extends Component {
                     <Button onClick={this.addClick} size={'sm'}>+ Add receiver</Button>
                 </div>
                 <div className={'listform'}>
-                    <Form.Group>
-                        <Form.Label>Action:</Form.Label>
-                        <Form.Select aria-label={"Action:"}>
-                            <option style={{display: "none"}}>--- choose action ---</option>
-                            <option value={'delete'}>Delete selected</option>
-                            <option value={'disable'}>Disable selected</option>
-                        </Form.Select>
-                        <Button style={{marginLeft: "10px"}} variant={"secondary"} className={"action-submit"} onClick={() => console.log(this.state.action)}>
-                            Submit
-                        </Button>
-                    </Form.Group>
-                    <ListTable receivers={this.props.parent.drf.receivers}></ListTable>
+                    <div className={"row"}>
+                        <div className={"col-1"}>
+                            <Form.Label>Action:</Form.Label>
+                        </div>
+                        <div className={"col-6"}>
+                            <Form.Select aria-label={"Action:"}>
+                                <option style={{display: "none"}}>--- choose action ---</option>
+                                <option value={'delete'}>Delete selected</option>
+                                <option value={'disable'}>Disable selected</option>
+                            </Form.Select>
+                        </div>
+                        <div className={"col-5"}>
+                            <Button variant={"secondary"} className={"action-submit"} onClick={() => console.log(this.state.action)}>
+                                Submit
+                            </Button>
+                        </div>
+                    </div>
                 </div>
+                <ListTable receivers={this.props.parent.drf.receivers}></ListTable>
             </div>
         )
     }

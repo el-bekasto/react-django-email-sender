@@ -1,8 +1,11 @@
 div.listform, table {
-    width: 80%;
+    width: 80% !important;
     margin: auto;
-    /*margin: 15px 75px;*/
-    /*max-height: 80% !important;*/
+}
+
+div.listform {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 div.addreceiver button, div.addformbutton button {
@@ -18,8 +21,4 @@ div.addreceiver button:hover, div.addformblock button:hover {
     color: crimson;
     background-color: white;
     border-color: crimson;
-}
-
-table {
-    max-height: 10% !important;
 }

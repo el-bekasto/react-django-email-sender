@@ -35,7 +35,7 @@ label.form {
     font-family: "Courier New", monospace;
 }
 
-button {
+div.send-form button {
     margin: auto;
     width: 200px;
     height: 50%;
