@@ -29,30 +29,32 @@ export default class List extends Component {
     }
     render () {
         return (
-            <div className={"list"}>
-                <div className={'addreceiver'}>
-                    <Button onClick={this.addClick} size={'sm'}>+ Add receiver</Button>
-                </div>
-                <div className={'listform'}>
-                    <div className={"row"}>
-                        <div className={"col-1"}>
-                            <Form.Label>Action:</Form.Label>
-                        </div>
-                        <div className={"col-6"}>
-                            <Form.Select aria-label={"Action:"}>
-                                <option style={{display: "none"}}>--- choose action ---</option>
-                                <option value={'delete'}>Delete selected</option>
-                                <option value={'disable'}>Disable selected</option>
-                            </Form.Select>
-                        </div>
-                        <div className={"col-5"}>
-                            <Button variant={"secondary"} className={"action-submit"} onClick={() => console.log(this.state.action)}>
-                                Submit
-                            </Button>
-                        </div>
+            <div className={"list container-fluid"}>
+                <div className={'row'}>
+                    <div className={'addreceiver col-3'}>
+                        <Button onClick={this.addClick} size={'sm'}>+ Add receiver</Button>
+                    </div>
+                    <div className={"col-1"}>
+                        <Form.Label>Action:</Form.Label>
+                    </div>
+                    <div className={"col-6"}>
+                        <Form.Select aria-label={"Action:"}>
+                            <option style={{display: "none"}}>--- choose action ---</option>
+                            <option value={'delete'}>Delete selected</option>
+                            <option value={'disable'}>Disable selected</option>
+                        </Form.Select>
+                    </div>
+                    <div className={"col-2"}>
+                        <Button variant={"secondary"} className={"action-submit"} onClick={() => console.log(this.state.action)}>
+                            Submit
+                        </Button>
                     </div>
                 </div>
-                <ListTable receivers={this.props.parent.drf.receivers}></ListTable>
+                <div className={'row justify-content-center'}>
+                    <div className={'col-10'}>
+                        <ListTable receivers={this.props.parent.drf.receivers}></ListTable>
+                    </div>
+                </div>
             </div>
         )
     }

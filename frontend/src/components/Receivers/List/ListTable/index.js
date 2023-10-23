@@ -1,9 +1,8 @@
 import Table from 'react-bootstrap/Table';
 
 export default function ListTable ({receivers}) {
-    console.log(receivers);
     return (
-        <div className={"h-50"}>
+        <div>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -17,7 +16,7 @@ export default function ListTable ({receivers}) {
                     {receivers.map(
                         (r) => <tr>
                             <td>
-                                <input type={"checkbox"}></input>
+                                <input type={"checkbox"}/>
                             </td>
                             {Object.keys(r).map((x) => <td>{r[x]}</td>)}
                         </tr>

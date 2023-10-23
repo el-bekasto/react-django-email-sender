@@ -18,16 +18,24 @@ export default function AddForm ({parent}) {
                 <Button onClick={() => parent.changePage('list')} size={'sm'}>{'<'} Back to list</Button>
             </div>
             <div className={"text-center"}>
-                <Form>
-                    <Form.Group>
+                <div className={'row justify-content-center'}>
+                    <div className={'col-2'}>
                         <Form.Label>Name:</Form.Label>
+                    </div>
+                    <div className={'col-8'}>
                         <Form.Control value={name} onChange={(event) => setName(event.target.value)} placeholder={'John Doe'}/>
-                    </Form.Group>
-                    <Form.Group>
+                    </div>
+                </div>
+                <br></br>
+                <div className={'row justify-content-center'}>
+                    <div className={'col-2'}>
                         <Form.Label>Email address:</Form.Label>
+                    </div>
+                    <div className={'col-8'}>
                         <Form.Control value={address} onChange={(event) => setAddress(event.target.value)} placeholder={'user@mail.com'}/>
-                    </Form.Group>
-                </Form>
+                    </div>
+                </div>
+                <br></br>
                 <div className={'addformconfirm'}>
                     <Button onClick={addReceiver}>Add</Button>
                 </div>
