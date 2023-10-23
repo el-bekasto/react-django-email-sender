@@ -41,7 +41,6 @@ export default class List extends Component {
                         <Form.Select aria-label={"Action:"}>
                             <option style={{display: "none"}}>--- choose action ---</option>
                             <option value={'delete'}>Delete selected</option>
-                            <option value={'disable'}>Disable selected</option>
                         </Form.Select>
                     </div>
                     <div className={"col-2"}>

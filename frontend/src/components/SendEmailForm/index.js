@@ -37,14 +37,14 @@ export default function SendEmailForm () {
                 <Form>
                     <Form.Group className={"mb-3"}>
                         <Form.Label>Subject</Form.Label>
-                        <Form.Control placeholder={"About last weekend..."}/>
+                        <Form.Control placeholder={"About last weekend..."} onChange={changeSubject}/>
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Message</Form.Label>
-                        <Form.Control as={'textarea'} rows={7} placeholder={'Dear John Doe...'}/>
+                        <Form.Control as={'textarea'} rows={7} placeholder={'Dear John Doe...'} onChange={changeBody}/>
                     </Form.Group>
                 </Form>
-                <Button variant={"primary"}>Send</Button>
+                <Button variant={"primary"} onClick={sendButton}>Send</Button>
             </div>
         </div>
     )
