@@ -1,5 +1,5 @@
 from rest_framework.views import APIView, Response
-from rest_framework.generics import ListAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, DestroyAPIView
 from rest_framework.request import Request
 from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
@@ -35,6 +35,11 @@ class GetReceiversAPIView(ListAPIView):
 
 
 class CreateReceiverAPIView(CreateAPIView):
+    queryset = Receiver.objects.all()
+    serializer_class = ReceiverSerializer
+
+
+class DeleteReceiverAPIView(DestroyAPIView):
     queryset = Receiver.objects.all()
     serializer_class = ReceiverSerializer
 
